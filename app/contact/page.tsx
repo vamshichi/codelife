@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/components/ui/use-toast"
+// import { toast } from "@/components/ui/use-toast"
 import Header from "@/components/Header"
 
 export default function ContactPage() {
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Get In Touch</h2>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    We'd love to hear from you. Fill out the form and we'll get back to you as soon as possible.
+                    We&apos;d love to hear from you. Fill out the form and we&apos;ll get back to you as soon as possible.
                   </p>
                 </div>
                 <div className="grid gap-4">

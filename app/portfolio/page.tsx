@@ -130,7 +130,7 @@ export default function PortfolioPage() {
                   Our Portfolio
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Explore our previous projects and see how we've helped businesses establish their online presence.
+                  Explore our previous projects and see how we&apos;ve helped businesses establish their online presence.
                 </p>
               </div>
             </div>

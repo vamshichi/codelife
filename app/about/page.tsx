@@ -108,7 +108,7 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    We stay at the forefront of web development trends and technologies. We're always learning,
+                    We stay at the forefront of web development trends and technologies. We&apos;re always learning,
                     experimenting, and finding new ways to create better digital experiences.
                   </p>
                 </CardContent>
