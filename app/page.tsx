@@ -13,7 +13,7 @@
 // import Header from "@/components/Header"
 import HeroSection from "@/components/homepage/HeroSection"
 import Pricing from "@/components/homepage/Pricing"
-import AdditionalServices from "@/components/homepage/AdditionalServices"
+// import AdditionalServices from "@/components/homepage/AdditionalServices"
 import PaymentTerms from "@/components/homepage/PaymentTerms"
 import WhyChooseUs from "@/components/homepage/WhyChooseUs"
 import Testimonials from "@/components/homepage/Testimonials"

@@ -28,7 +28,7 @@ const PortfolioSection = () => {
     <section className="w-full py-12 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center md:text-4xl">Our Work & Clients</h2>
-        <p className="text-center text-gray-600 mt-3">Explore our portfolio and the companies we've worked with.</p>
+        <p className="text-center text-gray-600 mt-3">Explore our portfolio and the companies we&apos;ve worked with.</p>
 
         {/* Projects Grid */}
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

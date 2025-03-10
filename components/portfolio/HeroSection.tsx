@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="relative max-w-4xl mx-auto px-6">
         <h1 className="text-4xl font-bold mb-4">Check out our past projects & success stories!</h1>
         <p className="text-lg text-gray-300 mb-6">
-          Explore our portfolio and see how we've helped businesses thrive with modern web solutions.
+          Explore our portfolio and see how we&apos;ve helped businesses thrive with modern web solutions.
         </p>
         <a
           href="/portfolio"

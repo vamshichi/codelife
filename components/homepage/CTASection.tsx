@@ -6,7 +6,7 @@ const CTASection = () => {
       <div className="container px-4 mx-auto max-w-7xl text-center">
         <h2 className="text-3xl font-bold md:text-4xl">Get Your Website Built by Experts!</h2>
         <p className="mt-3 text-lg text-gray-200">
-          Fill out the form or call us today to discuss your project. Let's bring your vision to life!
+          Fill out the form or call us today to discuss your project. Let&apos;s bring your vision to life!
         </p>
 
         <div className="mt-6 flex flex-col md:flex-row justify-center gap-4">

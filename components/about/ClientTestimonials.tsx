@@ -51,8 +51,8 @@ const ClientTestimonials = () => {
                 <Star key={i} size={24} className="text-yellow-500" />
               ))}
             </div>
-            <p className="text-lg text-gray-700 italic">"{testimonials[index].review}"</p>
-            <h4 className="text-xl font-semibold text-gray-900 mt-4">– {testimonials[index].name}</h4>
+            <p className="text-lg text-gray-700 italic">{testimonials[index].review}</p>
+            <h4 className="text-xl font-semibold text-gray-900 mt-4">{testimonials[index].name}</h4>
           </motion.div>
         </MotionConfig>
 

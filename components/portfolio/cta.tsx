@@ -8,13 +8,13 @@ const CTA = () => {
           Want to be our next success story?
         </h2>
         <p className="text-lg mb-6">
-          Let's collaborate and bring your vision to life with expert web solutions.
+          Let&apos;s collaborate and bring your vision to life with expert web solutions.
         </p>
         <a
           href="/contact"
           className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-200 transition"
         >
-          Let's Work Together!
+          Let&apos;s Work Together!
         </a>
       </div>
     </section>
