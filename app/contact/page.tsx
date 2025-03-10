@@ -13,8 +13,9 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
+import ContactInfo from "@/components/contact/ContactInfo"
 // import { toast } from "@/components/ui/use-toast"
-import Header from "@/components/Header"
+// import Header from "@/components/Header"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ export default function ContactPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-black">
-      <Header />
+      
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-muted/50 to-background">
           <div className="container px-4 md:px-6  max-w-7xl mx-auto">
@@ -281,28 +282,7 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t bg-background py-6 md:py-12">
-        <div className="container flex flex-col items-center justify-center gap-4 px-4 md:px-6 md:flex-row md:justify-between  max-w-7xl mx-auto">
-          <div className="flex items-center gap-2">
-            <Code className="h-6 w-6 text-primary" />
-            <span className="text-lg font-bold">Codelife</span>
-          </div>
-          <p className="text-center text-sm text-muted-foreground md:text-left">
-            © 2025 Codelife. All rights reserved.
-          </p>
-          <div className="flex gap-4">
-            <Link href="#" className="text-sm font-medium hover:text-primary">
-              Terms
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:text-primary">
-              Privacy
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-primary">
-              Contact
-            </Link>
-          </div>
-        </div>
-      </footer>
+      {/* <ContactInfo /> */}
     </div>
   )
 }

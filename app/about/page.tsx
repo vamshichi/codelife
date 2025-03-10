@@ -4,29 +4,24 @@ import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import Header from "@/components/Header"
+import Hero from "@/components/about/Hero"
+import OurStory from "@/components/about/OurStory"
+import MeetTheTeam from "@/components/about/MeetTheTeam"
+import WhyWorkWithUs from "@/components/about/WhyWorkWithUs"
+import ClientTestimonials from "@/components/about/ClientTestimonials"
+import CTACallToAction from "@/components/about/CTACallToAction"
+// import Header from "@/components/Header"
 
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-black">
-      <Header />
+      
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-muted/50 to-background">
-          <div className="container px-4 md:px-6  max-w-7xl mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-                  About Codelife
-                </h1>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  We are a team of passionate web developers dedicated to creating exceptional digital experiences.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero />
 
-        <section className="w-full py-12 md:py-24 bg-background">
+        <OurStory />
+
+        {/* <section className="w-full py-12 md:py-24 bg-background">
           <div className="container px-4 md:px-6  max-w-7xl mx-auto">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
               <div className="flex items-center justify-center">
@@ -61,9 +56,11 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="w-full py-12 md:py-24 bg-muted/50">
+        <MeetTheTeam />
+
+        {/* <section className="w-full py-12 md:py-24 bg-muted/50">
           <div className="container px-4 md:px-6  max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -214,9 +211,9 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="w-full py-12 md:py-24 bg-muted/50">
+        {/* <section className="w-full py-12 md:py-24 bg-muted/50">
           <div className="container px-4 md:px-6  max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -285,9 +282,13 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="w-full py-12 md:py-24 bg-background">
+        <WhyWorkWithUs />
+
+        <ClientTestimonials />
+
+        {/* <section className="w-full py-12 md:py-24 bg-background">
           <div className="container px-4 md:px-6  max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -306,9 +307,10 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+        <CTACallToAction />
       </main>
-      <footer className="w-full border-t bg-background py-6 md:py-12">
+      {/* <footer className="w-full border-t bg-background py-6 md:py-12">
         <div className="container flex flex-col items-center justify-center gap-4 px-4 md:px-6 md:flex-row md:justify-between  max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
             <Code className="h-6 w-6 text-primary" />
@@ -329,7 +331,7 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }

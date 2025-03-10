@@ -9,7 +9,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white shadow-md">
+    <header className="sticky top-0 z-50 w-full border-b bg-white shadow-md text-black">
       <div className="container mx-auto flex h-16 items-center justify-between px-6 lg:px-12">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -27,9 +27,9 @@ const Header = () => {
         </nav>
 
         {/* CTA Button */}
-        <div className="hidden lg:block text-white">
+        {/* <div className="hidden lg:block text-white">
           <Button size="lg">Get Started</Button>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Button */}
         <div className="lg:hidden">
@@ -42,12 +42,12 @@ const Header = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <nav className="lg:hidden absolute top-16 left-0 w-full bg-white shadow-md py-4 flex flex-col gap-5 text-center">
-          <Link href="#" className="text-base font-medium hover:text-primary">Home</Link>
-          <Link href="#" className="text-base font-medium hover:text-primary">Services</Link>
-          <Link href="#" className="text-base font-medium hover:text-primary">Portfolio</Link>
-          <Link href="#" className="text-base font-medium hover:text-primary">About</Link>
-          <Link href="#" className="text-base font-medium hover:text-primary">Contact</Link>
-          <Button className="mx-auto w-40">Get Started</Button>
+          <Link href="/" className="text-base font-medium hover:text-primary">Home</Link>
+          <Link href="/services" className="text-base font-medium hover:text-primary">Services</Link>
+          <Link href="/portfolio" className="text-base font-medium hover:text-primary">Portfolio</Link>
+          <Link href="/about" className="text-base font-medium hover:text-primary">About</Link>
+          <Link href="/contact" className="text-base font-medium hover:text-primary">Contact</Link>
+          {/* <Button className="mx-auto w-40">Get Started</Button> */}
         </nav>
       )}
     </header>
