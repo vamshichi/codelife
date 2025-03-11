@@ -9,9 +9,9 @@ const HeroSection = () => {
             Tailored solutions to meet your business needs and drive success.
           </p>
           <div className="mt-6 flex justify-center gap-4">
-            <a href="/services" className="bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-100">
+            {/* <a href="/services" className="bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-100">
               View Services
-            </a>
+            </a> */}
             <a href="/contact" className="bg-yellow-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-600">
               Get a Quote
             </a>

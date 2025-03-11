@@ -4,43 +4,54 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Pricing = () => {
-  const [activeTab, setActiveTab] = useState('personal');
+  const [activeTab, setActiveTab] = useState('basic');
 
   const tabs = [
-    { id: 'personal', label: 'Personal Website' },
+    { id: 'basic', label: 'Basic Website' },
     { id: 'business', label: 'Business Website' },
     { id: 'ecommerce', label: 'E-commerce Website' },
-    { id: 'custom', label: 'Custom Website' }
+    { id: 'custom', label: 'Custom Web Apps' },
+    { id: 'uiux', label: 'UI/UX Design' },
+    { id: 'maintenance', label: 'Website Maintenance' }
   ];
 
   const pricingData: Record<string, { title: string; price: string; features: string[] }> = {
-    personal: {
-      title: 'Personal Website',
-      price: '₹15,000 - ₹30,000 ',
-      features: ['Responsive Design', 'Basic SEO', 'Contact Form', 'Hosting Included']
+    basic: {
+      title: 'Basic Website',
+      price: '₹20,000 - 30,000',
+      features: ['Static site with 3-5 pages', 'Mobile-friendly Design', 'Basic SEO Optimization', 'Contact Form', 'Hosting & Domain Setup']
     },
     business: {
       title: 'Business Website',
-      price: '₹30,000 - ₹50,000',
-      features: ['All Personal Features', 'Multiple Pages', 'Advanced SEO', 'Google Analytics']
+      price: '',
+      features: ['CMS/Admin Panel', '6-10 Pages', 'Advanced SEO Optimization', 'Google Analytics Integration', 'Custom Blog Section']
     },
     ecommerce: {
       title: 'E-commerce Website',
-      price: '₹50,000 - ₹1,50,000  ',
-      features: ['All Business Features', 'Payment Integration', 'Product Listings', 'Order Management']
+      price: '',
+      features: ['Product Catalog', 'Shopping Cart & Payment Integration', 'Order Management', 'User Authentication', 'Basic Inventory System']
     },
     custom: {
-      title: 'Custom Website',
-      price: 'Contact for Pricing',
-      features: ['Fully Customized Solution', 'Scalable Architecture', 'Premium Support']
+      title: 'Custom Web Apps',
+      price: '',
+      features: ['CRM, SaaS, Job Portals, etc.', 'Custom API Integration', 'Scalable & Secure Architecture', 'Third-party Service Integrations', 'Premium Support']
+    },
+    uiux: {
+      title: 'UI/UX Design',
+      price: '',
+      features: ['Wireframes & Prototypes', 'Custom UI Designs', 'User Experience Optimization', 'Figma/Adobe XD Designs', 'Mobile & Web UI']
+    },
+    maintenance: {
+      title: 'Website Maintenance',
+      price: '',
+      features: ['Bug Fixes & Security Updates', 'Content Updates', 'Performance Optimization', 'Monthly Backup & Monitoring', '24/7 Support (Optional)']
     }
   };
-  
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6 py-40">
+    <div className="w-full max-w-4xl mx-auto p-6 py-20">
       <h2 className="text-3xl font-bold text-center mb-6">Pricing Plans</h2>
-      <div className="flex justify-center space-x-4 mb-6">
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
         {tabs.map((tab) => (
           <button
             key={tab.id}

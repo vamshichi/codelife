@@ -9,14 +9,14 @@ import DevelopmentProcess from "@/components/Services/DevelopmentProcess"
 import FAQsCTA from "@/components/Services/FAQsCTA"
 import HeroSection from "@/components/Services/HeroSection"
 // import OurServices from "@/components/Services/OurServices"
-import ServiceOfferings from "@/components/Services/ServiceOfferings"
+// import ServiceOfferings from "@/components/Services/ServiceOfferings"
 // import Header from "@/components/Header"
 
 export default function ServicesPage() {
   return (
     <div className="flex min-h-screen flex-col text-black bg-white">
      <HeroSection />
-     <ServiceOfferings />
+     {/* <ServiceOfferings /> */}
      <DevelopmentProcess />
      <FAQsCTA />
     </div>

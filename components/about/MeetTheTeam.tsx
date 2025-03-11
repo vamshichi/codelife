@@ -39,7 +39,7 @@ const teamMembers = [
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white shadow-md rounded-lg p-6 text-center">
-                <Image 
+                <img
                   src={member.image} 
                   alt={member.name} 
                   className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-blue-500"

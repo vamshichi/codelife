@@ -14,12 +14,12 @@ const Hero = () => {
           >
             Get in Touch
           </a>
-          <a
+          {/* <a
             href="/portfolio"
             className="px-6 py-3 border border-white rounded-lg shadow-md hover:bg-white hover:text-blue-600 transition"
           >
             View Portfolio
-          </a>
+          </a> */}
         </div>
       </section>
     );

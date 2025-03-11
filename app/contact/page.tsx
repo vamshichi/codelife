@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+// import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 // import ContactInfo from "@/components/contact/ContactInfo"
@@ -37,15 +37,49 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form Submitted:', formData);
-    // Here, you can integrate your backend API for form submission
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    try {
+      // Show loading state
+      // You could add a loading state to your component if desired
+
+      // Send the form data to your API route
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to submit form")
+      }
+
+      // Reset the form on success
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        projectType: "",
+        budget: "",
+        message: "",
+      })
+
+      // Show success message
+      alert("Thank you for your message! We will get back to you soon.")
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      alert("There was an error submitting your form. Please try again.")
+    }
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-black">
-      
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-muted/50 to-background">
           <div className="container px-4 md:px-6  max-w-7xl mx-auto">
@@ -67,7 +101,8 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Get In Touch</h2>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    We&apos;d love to hear from you. Fill out the form and we&apos;ll get back to you as soon as possible.
+                    We&apos;d love to hear from you. Fill out the form and we&apos;ll get back to you as soon as
+                    possible.
                   </p>
                 </div>
                 <div className="grid gap-4">
@@ -164,13 +199,13 @@ export default function ContactPage() {
                   <div className="grid gap-2">
                     <Label htmlFor="projectType">Project Type</Label>
                     <Select
-                      onValueChange={(value) => handleSelectChange("projectType", value)}
                       value={formData.projectType}
+                      onValueChange={(value) => handleSelectChange("projectType", value)}
                     >
                       <SelectTrigger id="projectType">
                         <SelectValue placeholder="Select project type" />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent className="text-black bg-gray-100">
                         <SelectItem value="basic">Basic Website</SelectItem>
                         <SelectItem value="business">Business Website</SelectItem>
                         <SelectItem value="ecommerce">E-commerce Website</SelectItem>
@@ -179,27 +214,21 @@ export default function ContactPage() {
                       </SelectContent>
                     </Select>
                   </div>
-                  <div className="grid gap-2">
-                    <Label>Budget Range</Label>
-                    <RadioGroup onValueChange={(value) => handleSelectChange("budget", value)} value={formData.budget}>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="10k-20k" id="budget-1" />
-                        <Label htmlFor="budget-1">₹10,000 - ₹20,000</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="20k-50k" id="budget-2" />
-                        <Label htmlFor="budget-2">₹20,000 - ₹50,000</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="50k-100k" id="budget-3" />
-                        <Label htmlFor="budget-3">₹50,000 - ₹1,00,000</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="100k+" id="budget-4" />
-                        <Label htmlFor="budget-4">₹1,00,000+</Label>
-                      </div>
-                    </RadioGroup>
-                  </div>
+
+                  {/* <div className="grid gap-2">
+                    <Label htmlFor="budget">Budget</Label>
+                    <Select value={formData.budget} onValueChange={(value) => handleSelectChange("budget", value)}>
+                      <SelectTrigger id="budget">
+                        <SelectValue placeholder="Select your budget" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="less-than-1k">Less than $1,000</SelectItem>
+                        <SelectItem value="1k-5k">$1,000 - $5,000</SelectItem>
+                        <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
+                        <SelectItem value="10k-plus">$10,000+</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div> */}
                   <div className="grid gap-2">
                     <Label htmlFor="message">Message</Label>
                     <Textarea

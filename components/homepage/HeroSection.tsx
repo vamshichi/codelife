@@ -14,12 +14,12 @@ export default function HeroSection() {
         >
           Get a Quote
         </a>
-        <a
+        {/* <a
           href="/pricing"
           className="px-6 py-3 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition"
         >
           View Pricing
-        </a>
+        </a> */}
       </div>
     </section>
   );

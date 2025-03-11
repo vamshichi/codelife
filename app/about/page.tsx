@@ -6,7 +6,7 @@
 // import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Hero from "@/components/about/Hero"
 import OurStory from "@/components/about/OurStory"
-import MeetTheTeam from "@/components/about/MeetTheTeam"
+// import MeetTheTeam from "@/components/about/MeetTheTeam"
 import WhyWorkWithUs from "@/components/about/WhyWorkWithUs"
 import ClientTestimonials from "@/components/about/ClientTestimonials"
 import CTACallToAction from "@/components/about/CTACallToAction"
@@ -58,7 +58,7 @@ export default function AboutPage() {
           </div>
         </section> */}
 
-        <MeetTheTeam />
+        {/* <MeetTheTeam /> */}
 
         {/* <section className="w-full py-12 md:py-24 bg-muted/50">
           <div className="container px-4 md:px-6  max-w-7xl mx-auto">
